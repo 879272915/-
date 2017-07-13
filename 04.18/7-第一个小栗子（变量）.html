@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: 3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="" style=""></div>
+		<script>
+			var div = document.getElementById('div1');
+			//1.给div添加点击事件处理
+			div.onclick = function(){
+				//2.改变div样式
+				div.style.width = '200px';
+				div.style.height = 0;
+				div.style.background = 'blue';
+			}
+		</script>
+	</body>
+</html>

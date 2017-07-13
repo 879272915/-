@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: 3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="" style=""></div>
+		<script>
+			/*
+			 	函数 function
+			 		作用类似变量，复用多行代码
+			 	有名函数
+			 		声明：
+			 			function 函数名(){}
+			 		调用：
+			 			直接调用：
+			 				函数名()
+			 				()：执行函数
+			 			事件调用：
+			 			不加()，不然还没点击，就执行了
+			 			
+			 			
+			 	匿名函数
+			 		声明：
+				 		function(){}
+				 		直接声明匿名函数会报错
+			 		1.在事件后声明
+			 		2.变量里声明
+			 		3.声明后立即执行
+			 		
+			 		调用：
+			 			1.事件调用
+			 			2.变量名()
+			 		
+			 	函数声明-创建函数，里边的代码不执行
+			 		
+			 	函数调用-逐行执行里边代码
+			 * */
+			var div1 = document.getElementById('div1');
+			//有名函数声明
+			function fn(){
+				div1.style.width = '200px';
+				div1.style.height = '200px';
+				div1.style.background = 'blue';
+			}
+			//有名函数直接调用
+			//fn()
+			//有名函数事件调用
+			//div1.onclick = fn
+			
+			
+			//直接声明匿名函数会报错
+			//function(){}
+			//事件后直接声明匿名函数
+			div1.onclick = function(){
+				div1.style.width = '200px';
+				div1.style.height = '200px';
+				div1.style.background = 'blue';
+			}
+			var fn1 = function(){
+				div1.style.width = '200px';
+				div1.style.height = '200px';
+				div1.style.background = 'blue';
+			}
+		</script>
+	</body>
+</html>

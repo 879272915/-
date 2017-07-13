@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: 3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="" style=""></div>
+		<script>
+			/*
+			 	1.点击div
+			 	2.改变div样式
+			 		宽100->200
+			 		高100->200
+			 		颜色 red->blue
+			 * 
+			 *  元素属性操作
+			 * 		元素.属性名 = 属性值
+			 * 		元素.style.样式名 = 值
+			 * 		值除了0都要加引号
+			 * */
+			//1.给div添加点击事件处理
+			document.getElementById('div1').onclick = function(){
+				//2.改变div样式
+				document.getElementById('div1').style.width = '200px';
+				document.getElementById('div1').style.height = 0;
+				document.getElementById('div1').style.background = 'blue';
+			}
+		</script>
+	</body>
+</html>

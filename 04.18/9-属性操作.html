@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: 3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="" style="width:200px"></div>
+		<script>
+			/*	
+			 	属性操作
+			 		操作的是行间属性，可读可写
+			 		.的方法
+			 			不符合小驼峰命名的样式名，去掉-，后边单词首字母大写
+			 			
+			 		[]的方法
+			 			变量只能用这个
+			 * */
+			var div1 = document.getElementById('div1');
+			var w = 'width';
+//			div1.style.width = '200px';
+//			div1.style.backgroundColor = 'blue';
+			div1.style['background-color'] = 'blue';
+//			div1.style[w] = '200px';
+		console.log(div1.style.width)
+		</script>
+	</body>
+</html>

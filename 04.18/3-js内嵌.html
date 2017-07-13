@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script>
+			//单行注释
+			/*
+			 	多行注释
+			 * 
+			 * */
+			/*
+ 
+			 * js内嵌
+				推荐位置：
+					body的结束标签上方
+				如果放在head里，由于代码是从上往下解析，在获取元素时，页面还没有这个元素，就会报错
+				解决方法：
+					window.onload = function(){
+						代码写这里
+					}
+				
+				优点：本页面内可以复用
+				缺点：不同页面不可以复用
+				
+				
+			 1.通过id的方式获取元素	
+			 document.getElementById('div1')
+			 注意：1.前边必须写document
+			      2.（.）：的
+			      
+			 元素.onclick = function(){
+			 	点击时要执行的代码
+			 }
+			 * 
+			 * */
+			window.onload = function(){
+				document.getElementById('div1').onclick = function(){
+					alert(1);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		
+	</body>
+</html>

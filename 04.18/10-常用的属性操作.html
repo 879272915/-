@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				transition: 3s;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1" class="abc" style="width:200px">
+			<span class="sp">这是文字</span>
+		</div>
+		<script>
+			/*
+			 	style
+			 	id
+			 	className
+			 	innerHTML-识别标签
+			 	innerText-不识别标签，只是文本
+			 	
+			 * */
+			var div1 = document.getElementById('div1');
+			console.log(div1.style.width)
+			console.log(div1.id)
+			console.log(div1.className)
+			console.log(div1.innerHTML)
+//			div1.innerHTML = '<p>改个内容</p>';
+			div1.innerText = '<p>改个内容</p>'
+		</script>
+	</body>
+</html>
