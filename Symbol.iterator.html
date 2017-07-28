@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var obj = {
+				name:'lijianchao',
+				age:24
+			};
+			obj[Symbol.iterator] = function(){
+				let arr = Object.keys(obj);
+				let i = 0;
+				let len = arr.length;
+				return{
+					next(){
+						if(i<len){
+							return{
+								value:{
+									key:arr[i],
+									val:obj[arr[i++]]
+								},
+								done:false
+							}
+						}else{
+							return{
+								value:null,
+								done:true
+							}
+						}
+					}
+				}
+			}
+			for (var {val,key} of obj) {
+				console.log(val,key)
+			}
+		</script>
+	</body>
+</html>
