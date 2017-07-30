@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的</title>
+			<link rel="icon" href="images/饿了么.png"/>
+			<link rel="stylesheet" type="text/css" href="css/style.css" />
+			<script>
+				//动态获取像素比
+				var pixelRatio = 1 / window.devicePixelRatio;
+				document.write('<meta name="viewport" content="width=device-width,initial-scale='+ pixelRatio +',minimum-scale='+ pixelRatio +',maximum-scale='+ pixelRatio +',user-scalable=no" />');
+				//获取html节点
+				var html = document.getElementsByTagName('html')[0];
+				//获取屏幕宽度
+				var pageWidth = html.getBoundingClientRect().width;
+				//html的字号
+				html.style.fontSize = pageWidth/16 + 'px';
+			</script>
+	</head>
+	<body>
+		
+		<header>
+			<div class="fanhui"><</div>
+			<h1>我的</h1>
+		</header>
+		<script src="js/Pixel Ratio.js"></script>
+	</body>
+</html>
