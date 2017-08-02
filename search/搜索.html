@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+	<body>
+		<input type="text" id="txt" placeholder="输入要查找的人名" /><input type="button" id="btn" value="查找"/>
+		<div id="div"></div>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script>
+			var txt = document.getElementById('txt');
+			$('#btn').click(function(){
+				$.ajax({
+					url:"php/ajax.php",
+					data:{
+						user:$('#txt').val()
+					},
+					dataType:'json',
+					success:function(data){
+						//data = JSON.parse(data);
+						console.log(data)
+						if(data.code == 0){
+							$('#div').text('我叫'+data.data.name+',今年'+data.data.age+'爱好:'+data.data.hobby+'，我想说:'+data.data.info)
+						}else if(data.code == 1)(
+							$('#div').text(data.data)
+						)
+						
+					}
+				});
+			})
+		</script>
+	</body>
+</html>
