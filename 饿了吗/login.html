@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="icon" href="images/饿了么.png"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script>
+			//动态获取像素比
+			var pixelRatio = 1 / window.devicePixelRatio;
+			document.write('<meta name="viewport" content="width=device-width,initial-scale='+ pixelRatio +',minimum-scale='+ pixelRatio +',maximum-scale='+ pixelRatio +',user-scalable=no" />');
+			//获取html节点
+			var html = document.getElementsByTagName('html')[0];
+			//获取屏幕宽度
+			var pageWidth = html.getBoundingClientRect().width;
+			//html的字号
+			html.style.fontSize = pageWidth/16 + 'px';
+		</script>
+		
+	</head>
+	<body>
+		<header>
+			<img src="images/login.png" />
+		</header>
+		<section>
+			<div class="loginHeader">
+				<a href="javascript:;" class="active">登录</a>
+				<a href="javascript:;">注册</a>
+			</div>
+		</section>
+		<div id="zLogin">
+			<div class="login-dl">
+				<input type="text" placehold="请输入账号"/ class="inputs" id="login_user"><br />
+				<input type="text" placehold="请输入密码"/ class="inputs" id="login_pass"><br />
+				<input type="button" value="登录" id="login_btn" class="login"/>
+			</div>
+			<div class="login-zc">
+				<input type="text" placehold="请输入账号"/ class="inputs" id="add_user"><br />
+				<input type="text" placehold="请输入密码"/ class="inputs" id="add_pass"><br />
+				<input type="button" value="注册"/ id="add_btn" class="reg">
+			</div>
+		</div>
+		<p><a href="javascript:;">关于我们</a></p>
+		<script src="js/Pixel Ratio.js"></script>
+	</body>
+</html>
