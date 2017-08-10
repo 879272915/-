@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery弹出社交分享按钮</title>
+    <link rel="stylesheet" href="css/share.css" type="text/css" />
+    <script src="js/jquery1.8.2.min.js" type="text/javascript"></script>
+    <script src="js/share.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+	<!--
+		tQQ	param:{url,content,title,pic}	分享到腾讯微博
+		qZone	param:{url,content,title,pic}	分享到QQ空间
+		sinaWeibo	param:{url,content,title,pic}	分享到新浪微博
+		doubanShare	param:{url,content,title,pic}	分享到豆瓣
+		weixinShare	param:{url,content,title,pic}	分享到微信
+		{
+		    url: '分享的网址',  
+		    title: '分享的标题',
+		    content: '内容',
+		    pic: '图片'
+		    }
+		参数为可选,其中url和title的默认值为当前页面的url和title
+	-->
+    <h1>分享组件</h1>
+    <div id="socialShare"></div>
+	<h1>单独使用</h1>
+	<a id="shareQQ">分享到QQ空间</a>
+    <script>
+        $(function() {
+
+            $("#socialShare").socialShare({
+                content: '',
+				url:'',
+				titile:''
+            });
+
+        });
+
+		$("#shareQQ").on("click",function(){
+			$(this).socialShare("tQQ");
+		})
+    </script>
+
+</body>
+
+</html>
